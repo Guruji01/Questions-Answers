@@ -6,13 +6,13 @@ class Naveen
 	public static void main(String args)
 	{
 		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
+		int n = sc.nextInt();                            // 6
 
 		int arr[] = new int[n];
 
 		for(int i=0;i<n;i++)
 		{
-			arr[i] = sc.nextInt();
+			arr[i] = sc.nextInt();                 // 0 1 5 8 9 10
 		}
 
 		System.out.println(Naveen.Find(arr,n));
