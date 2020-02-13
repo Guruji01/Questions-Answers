@@ -12,7 +12,7 @@ class Naveen
 
 		for(int i=0;i<n;i++)
 		{
-			arr[i] = sc.nextInt();                 // 0 1 5 8 9 10
+			arr[i] = sc.nextInt();                 // 3 5 6 8 9 12
 		}
 
 		System.out.println(Naveen.Find(arr,n));
