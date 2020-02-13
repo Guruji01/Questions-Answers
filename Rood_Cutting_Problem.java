@@ -41,7 +41,7 @@ class Naveen
            	}
            	else
            	{
-           		dp[i][j] = Math.max(price[i-1]+dp[i][j-1],dp[i-1][j]);
+           		dp[i][j] = Math.max(price[i-1]+dp[i][j-i],dp[i-1][j]);
            	}
            }
 
