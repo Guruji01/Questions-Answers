@@ -1,0 +1,55 @@
+public class MyClass
+{
+    public static void main(String args[])
+    {
+      MyClass obj = new MyClass();  
+      obj.minDistance("abcdef","azcde");
+    }
+
+    public void minDistance(String A, String B) 
+    {
+        
+        int arr[][] = new int[A.length()+1][B.length()+1];
+        
+        for(int i=0;i<=A.length();i++)
+        {
+            arr[i][0] = i;
+        }
+        for(int i=0;i<=B.length();i++)
+        {
+            arr[0][i] = i;
+        }
+        
+        for(int i=0;i<A.length();i++)
+        {
+            for(int j=0;j<B.length();j++)
+            {
+                if(A.charAt(i) == B.charAt(j))
+                {
+                    arr[i+1][j+1] = arr[i-1+1][j-1+1];
+                }
+                else
+                {
+                    arr[i+1][j+1] = 1+(Math.min(arr[i+1][j+1-1] ,  Math.min(arr[i-1+1][j+1],arr[i-1+1][j-1+1]) ) );
+                }
+            }
+        }
+        
+        for(int i=0;i<A.length()+1;i++)
+        {
+            for(int j=0;j<B.length()+1;j++)
+            {
+                System.out.print(arr[i][j]+" ");
+            }
+            System.out.println("");
+        }
+        
+        System.out.println("");
+        System.out.println("");
+        
+        System.out.println(arr[A.length()][B.length()]);
+        
+        
+    }
+
+}
